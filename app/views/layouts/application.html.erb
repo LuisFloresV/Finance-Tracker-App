@@ -4,14 +4,14 @@
     <title>FinanceTracker</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%= render 'layouts/navigation'%> 
+    <div class="container mt-2">
+      <%= render 'layouts/messages'%> 
+      <%= yield %>
+    </div>
   </body>
 </html>
