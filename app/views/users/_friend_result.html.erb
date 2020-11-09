@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-12 col-md-6">
+    <%= render 'layouts/messages' %>
+  </div>
+</div>
+<% if @friends %>
+  <div class="card card-header py-3">
+    <table class="col-md-12">
+      <tbody>
+        <% @friends.each do |friend| %>
+          <tr>
+            <td><strong>Name</strong> <%= friend.full_name %></td>
+            <td><strong>Email:</strong> <%= friend.email %></td>
+            <td><strong>Profile:</strong> <%= link_to "View profile", '#',class: "btn btn-sm btn-info" %>
+              <%= link_to "Follow friend?", '#',class: "btn btn-sm btn-info" %>
+            </td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+    </div>
+<% end %>
