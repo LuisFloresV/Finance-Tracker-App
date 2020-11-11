@@ -13,7 +13,10 @@
         <th scope="row"><%= friend.email %></th>
         <td><%= friend.first_name %></td>
         <td><%= friend.last_name %></td>
-        <td><%= link_to 'Remove',"#",method: :delete, data: {confirm: 'Are you sure?'},
+        <td>
+          <%= link_to 'View profile',user_path(friend),
+        class: "btn btn-sm btn-info" %>
+          <%= link_to 'Remove',friendship_path(friend),method: :delete, data: {confirm: 'Are you sure?'},
         class: "btn btn-sm btn-danger" %></td>
       </tr>
     <% end %>
